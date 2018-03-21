@@ -1,5 +1,6 @@
 # pelican-prismjs
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/EpicSoftworks/pelican-prismjs/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/EpicSoftworks/pelican-prismjs/?branch=master)
 [![GitHub license](https://img.shields.io/github/license/EpicSoftworks/pelican-prismjs.svg)](https://github.com/EpicSoftworks/pelican-prismjs/blob/master/LICENSE)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/epicsoftworks)
 
