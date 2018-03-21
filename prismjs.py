@@ -2,17 +2,23 @@
 # -- coding: utf-8 --
 
 from pelican import signals, contents
-from bs4 import BeautifulSoup
 from os import path
 import re
 
 def match_pre_options(string, language):
     # pre-defined list of supported options
     options = [
-        'data-user',
-        'data-host',
-        'data-output',
-        'class'
+        'data-user', # commandline plugin
+        'data-host', # commandline plugin
+        'data-output', # commandline plugin
+        'data-src', # file highlight plugin
+        'data-label', # toolbar plugin
+        'data-line', # line highlight
+        'data-start', # line highlight
+        'data-language', # show language plugin
+        'data-jsonp', # jsonp hightlight
+        'data-filename', # jsonp hightlight
+        'class' # generic
     ]
 
     # string we return
@@ -78,6 +84,7 @@ def convert_code_blocks(content_object):
             # match attributes and remove them
             match, attributes = match_pre_options(match, language)
 
+            # Replace article with new content
             replacement = '<pre' + attributes + '><code class="language-' + language + '">' + match + '</code></pre>'
             updated_article = re.sub(code_regex, replacement, updated_article, 1)
 
